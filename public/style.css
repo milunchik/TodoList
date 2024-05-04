@@ -1,0 +1,30 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(196, 248, 185);
+    color: white;
+    padding: 5px;
+    margin: 5px;
+}
+
+.main-container{
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+}
+
+button{
+    background-color: darkgreen;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px;
+}
+.todo-list{
+    color: black;
+}
+.deleteButton{
+    margin: 5px;
+}

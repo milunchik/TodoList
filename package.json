@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "express": "^4.19.2",
+    "mongoose": "^8.3.3",
+    "moongose": "^1.0.0",
+    "node": "^22.1.0"
+  },
+  "name": "todolist",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Emily",
+  "license": "ISC",
+  "description": ""
+}
