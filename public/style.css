@@ -22,9 +22,17 @@ button{
     border-radius: 5px;
     padding: 8px;
 }
-.todo-list{
+.todo-list li {
     color: black;
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px; 
 }
-.deleteButton{
-    margin: 5px;
+
+.todo-list li .deleteButton {
+    margin-left: auto;
+}
+
+.deleteButton {
+    margin-left: 10px;
 }
