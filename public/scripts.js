@@ -1,5 +1,4 @@
 const todo = document.querySelector('.text'),
-date = document.querySelector('.date'),
 addBtn = document.querySelector('.add-button'),
 list = document.querySelector('.todo-list')
 
@@ -7,9 +6,8 @@ addBtn.addEventListener('click', async (event) => {
     event.preventDefault()
 
     let userTodo = todo.value
-    let userDate = date.value
 
-    if(!userTodo && !userDate) return
+    if(!userTodo) return
 
     try{
             const newTodoResponse = await fetch('/todos', {
@@ -18,8 +16,7 @@ addBtn.addEventListener('click', async (event) => {
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({
-                    text: userTodo,
-                    date: userDate
+                    text: userTodo
                 })
             })
 
@@ -28,7 +25,7 @@ addBtn.addEventListener('click', async (event) => {
             let newTodoData = await newTodoResponse.json()
             
                 const li = document.createElement('li')
-                li.textContent = `${userTodo} - ${userDate}`
+                li.textContent = `${userTodo}`
                 li.dataset.id = newTodoData._id
                 list.appendChild(li)
         }else{
@@ -37,7 +34,6 @@ addBtn.addEventListener('click', async (event) => {
     }catch(error){
         console.log(error)
     }
-
 })
 
 window.addEventListener('load', async () => {
