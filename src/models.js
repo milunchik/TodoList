@@ -5,10 +5,6 @@ const TodoShema = new mongoose.Schema({
         type: String,
         require: true
     },
-    date:{
-        type: Date,
-        require: false
-    },
     status:{
         type: String,
         require: ['Text', 'In Progress', 'Done'],
